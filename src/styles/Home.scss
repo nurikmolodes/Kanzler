@@ -1,6 +1,107 @@
+@font-face {
+  font-family: "Pragmatica";
+  src: url("./assets/PragmaticaCondMedium.otf");
+}
+
 .wrapper {
   max-width: 1440px;
   margin: auto;
   overflow-x: hidden;
   min-width: 350px;
+
+  .header {
+    max-width: 1440px;
+    min-width: 350px;
+    margin-left: 40px;
+    display: flex;
+    height: 590px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    justify-content: flex-start;
+    gap: 170px;
+    @media (max-width: 1200px) {
+      gap: 0px;
+    }
+    @media (max-width: 1025px) {
+      flex-direction: column;
+      gap: 500px;
+      height: 820px;
+    }
+    @media (max-width: 970px) {
+      margin-left: 20px;
+    }
+
+    .left {
+      h1 {
+        font-family: "Pragmatica";
+        font-style: normal;
+        font-weight: 200;
+        font-size: 60px;
+        line-height: 100%;
+        color: #333333;
+        width: 524px;
+        @media (max-width: 542px) {
+          width: 300px;
+        }
+      }
+      p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: #333333;
+        opacity: 0.8;
+        width: 323px;
+      }
+    }
+    .right {
+      position: relative;
+      img {
+        position: absolute;
+      }
+      :nth-child(1) {
+        bottom: 0;
+        @media (max-width: 390px) {
+          left: -20px;
+        }
+      }
+      :nth-child(2) {
+        bottom: 0;
+        left: 100px;
+        @media (max-width: 520px) {
+          left: 0px;
+        }
+        @media (max-width: 390px) {
+          left: -20px;
+        }
+      }
+      :nth-child(3) {
+        left: -100px;
+        top: 100px;
+      }
+      :nth-child(4) {
+        left: 475px;
+        bottom: 0;
+        @media (max-width: 1335px) {
+          left: 400px;
+        }
+        @media (max-width: 1261px) {
+          left: 350px;
+        }
+        @media (max-width: 1025px) {
+          left: 475px;
+        }
+        @media (max-width: 625px) {
+          left: 375px;
+        }
+        @media (max-width: 520px) {
+          left: 300px;
+        }
+        @media (max-width: 440px) {
+          left: 200px;
+          bottom: 350px;
+        }
+      }
+    }
+  }
 }

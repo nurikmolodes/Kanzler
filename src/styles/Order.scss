@@ -685,7 +685,7 @@ form {
         -webkit-appearance: none;
         outline: none;
         cursor: pointer;
-        content: url(./assets/check.svg);
+        content: url("../assets/check.svg");
       }
       .check:checked {
         background-color: #ea5a5a;
