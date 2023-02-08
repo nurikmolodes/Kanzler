@@ -50,7 +50,7 @@ const Navbar = ({ setSearchh, cart }) => {
       </nav>
       {/* HEADER  */}
       <header>
-        <Link to={"/"}>
+        <Link to={'/'}>
           <div className="grey">
             <img src={grey} alt="" />
             <img src={burger} alt="" />

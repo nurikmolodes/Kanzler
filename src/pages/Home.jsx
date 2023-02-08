@@ -7,6 +7,7 @@ import redPen from "../assets/redPen.svg";
 import whitePen from "../assets/whitePen.svg";
 import call from "../assets/calling.svg";
 import linear from "../assets/linear.svg";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -18,7 +19,9 @@ const Home = () => {
             Основные направления – бумага и расходные материалы для полиграфии,
             поставки элитного кофе и чая, немецкого премиум пива.
           </p>
-          <img src={toCatalog} />
+          <Link to={"/catalog"}>
+            <img src={toCatalog} />
+          </Link>
         </div>
         <div className="right">
           <img src={redPen} />

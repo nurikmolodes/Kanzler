@@ -4,6 +4,7 @@ import "./App.scss";
 import { data } from "./assets/data";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import ErrorPage from "./pages/ErrorPage";
 import Home from "./pages/Home";
 import Order from "./pages/Order";
 
@@ -34,6 +35,7 @@ function App() {
             />
           }
         />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />
     </div>
