@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import vector from "../assets/vector.svg";
 import { data } from "../assets/data";
 import deleted from "../assets/delete.svg";
-import '../styles/Order.scss'
+import "../styles/Order.scss";
 
 const Order = ({ cart, setCart, filteredCart, setSearchh }) => {
   //   REMOVING ITEM
@@ -91,7 +91,7 @@ const Order = ({ cart, setCart, filteredCart, setSearchh }) => {
           {opened && (
             <div className="goods">
               {filteredCart.map((item, index) => (
-                <div>
+                <div key={item.id}>
                   <div className="good">
                     <img src={item.img} alt="" />
                     <h3>{item.name}</h3>
