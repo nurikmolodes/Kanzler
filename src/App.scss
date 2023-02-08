@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "Pragmatica";
+  src: url("./assets/PragmaticaCondMedium.otf");
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: auto;
+  overflow-x: hidden;
+  min-width: 350px;
+}
+
+.burger {
+  display: none !important;
+}
+@media (max-width: 968px) {
+  .burger {
+    display: block !important;
+    flex: 1;
+    margin-left: 10px;
+  }
+}
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: #000000;
+  opacity: 0.1;
+  margin-bottom: 30px;
+}
+.bold {
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  line-height: 100% !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+  margin-bottom: 20px;
+}
+.boldd {
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 100% !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+  margin-bottom: 17px;
+}
+.gray {
+  display: flex;
+  flex-direction: row !important;
+  margin-top: 50px;
+  img {
+    width: 67px;
+  }
+}
+.theVeryBottom {
+  opacity: 0.1;
+  width: 100%;
+  height: 1;
+  background-color: #ffffff;
+  margin-top: 80px;
+  max-width: 1188px;
+}
+.theVeryBottomText {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  opacity: 0.5;
+  margin-left: 125px;
+}
+
+.center {
+  @media (max-width: 800px) {
+    display: flex;
+    justify-content: center;
+    .theVeryBottomText {
+      margin-left: 0;
+    }
+  }
+}
+
+.modal {
+  right: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  z-index: 2;
+  text-align: left;
+  background-color: bisque;
+  margin-right: 0 !important;
+  align-items: center;
+  text-align: center;
+
+  a {
+    cursor: pointer;
+  }
+}
+.cartImage {
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+.reverse {
+  transform: rotate(360deg);
+  cursor: pointer;
+}
+@media (max-width: 385px) {
+  .cartImage {
+    position: relative;
+    right: 50px;
+    transform: rotate(180deg);
+  }
+  .reverse {
+    position: relative;
+    right: 50px;
+    transform: rotate(360deg);
+  }
+}
