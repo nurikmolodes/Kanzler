@@ -13,6 +13,7 @@
     max-width: 1440px;
     min-width: 350px;
     margin-left: 40px;
+    margin-top: 60px;
     display: flex;
     height: 590px;
     overflow-y: hidden;
@@ -191,12 +192,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 80px;
 
     .pointer {
       display: flex;
       gap: 14px;
       margin-right: 1130px;
+      margin-top: 70px;
       @media (max-width: 1440px) {
         margin-right: 0px;
       }

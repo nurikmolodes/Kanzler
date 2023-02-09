@@ -18,7 +18,6 @@ export const data = [
     amount: 1,
     price: 420,
     id: 2,
-
   },
   {
     img: pencil,
@@ -28,5 +27,30 @@ export const data = [
     price: 420,
     discountFrom: 1100,
     id: 3,
+  },
+  {
+    img: pen,
+    name: "Lorem ipsum dolor sit amet consectetur. Duis",
+    articul: "L434-GH43",
+    amount: 1,
+    price: 420,
+    id: 4,
+  },
+  {
+    img: thing,
+    name: "Lorem ipsum dolor sit amet ",
+    articul: "L434-GH43",
+    amount: 1,
+    price: 420,
+    id: 5,
+  },
+  {
+    img: pencil,
+    name: "Lorem ipsum dolor sit amet consectetur. Dictum venenatis porta at mus sit congu...",
+    articul: "L434-GH43",
+    amount: 1,
+    price: 420,
+    discountFrom: 1100,
+    id: 6,
   },
 ];
