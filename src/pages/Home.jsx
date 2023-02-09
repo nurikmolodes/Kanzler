@@ -36,10 +36,13 @@ import "swiper/scss/navigation";
 import leftNav from "../assets/rightNav.svg";
 import rightNav from "../assets/rightNav.svg";
 import { useMediaQuery } from "react-responsive";
+import { data } from "../assets/data";
+import addToCart from "../assets/addToCart.svg";
 
 const Home = () => {
   // REF SLIDER
   const swiperRef = useRef();
+  const swiperRe = useRef();
   // RESPONSIVENESS THROUGH USEMEDIAQUERY
   const bigScreen = useMediaQuery({ query: "(max-width: 1440px)" });
   return (
@@ -131,6 +134,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      {/* DISCOUNTS  */}
       <div className="discounts">
         <div className="pointer">
           <h1>Акции</h1>
@@ -189,6 +194,60 @@ const Home = () => {
           <div
             className="rightNav"
             onClick={() => swiperRef.current?.slideNext()}
+          >
+            <img src={rightNav} />
+          </div>
+        </div>
+      </div>
+
+      {/* POPULAR ONES  */}
+      <div className="popular">
+        <div className="pointer">
+          <h1>Популярные товары</h1>
+          <img src={line50} />
+        </div>
+        <div className="popular-goods">
+          <div
+            className="leftNav"
+            onClick={() => swiperRe.current?.slidePrev()}
+          >
+            <img src={leftNav} />
+          </div>
+          <Swiper
+            modules={[Navigation]}
+            onBeforeInit={(swiper) => {
+              swiperRe.current = swiper;
+            }}
+            spaceBetween={5}
+            slidesPerView={bigScreen ? 1 : 5}
+            speed={800}
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            {data.map((i) => (
+              <SwiperSlide>
+                <div className="good" key={i.id}>
+                  <img src={i.img} />
+                  <div>
+                    <h5>В наличии</h5>
+                    <p>{i.name}</p>
+                    <h2>{i.price} с</h2>
+                  </div>
+                  <div className="button">
+                    <div className="oye">
+                      <h4>-</h4>
+                      <h4>{i.amount}</h4>
+                      <h4>+</h4>
+                    </div>
+                    <img src={addToCart} />
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div
+            className="rightNav"
+            onClick={() => swiperRe.current?.slideNext()}
           >
             <img src={rightNav} />
           </div>
