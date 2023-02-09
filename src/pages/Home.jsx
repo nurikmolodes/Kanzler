@@ -1,6 +1,4 @@
-import React from "react";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import React, { useRef } from "react";
 import "../styles/Home.scss";
 import toCatalog from "../assets/toCatalog.svg";
 import redPen from "../assets/redPen.svg";
@@ -8,10 +6,45 @@ import whitePen from "../assets/whitePen.svg";
 import call from "../assets/calling.svg";
 import linear from "../assets/linear.svg";
 import { Link } from "react-router-dom";
+import cut from "../assets/cut.svg";
+import logoKanzler from "../assets/logoKanzler.svg";
+import burger from "../assets/burger.svg";
+import pismoGraph from "../assets/pismoGraphica.svg";
+import pismoGraph1 from "../assets/pismoGraphica1.svg";
+import kansTovar from "../assets/kansTovar.svg";
+import hudozh from "../assets/hudozh.svg";
+import art from "../assets/art.svg";
+import poligraph from "../assets/poligraph.svg";
+import office from "../assets/office.svg";
+import games from "../assets/games.svg";
+import discounts from "../assets/discounts.svg";
+import gift from "../assets/gift.svg";
+import insidePoligraph from "../assets/insidePoligraph.svg";
+import insideGame from "../assets/insideGame.svg";
+import insideGift from "../assets/insideGift.svg";
+import insideDiscounts from "../assets/insideDiscounts.svg";
+import line50 from "../assets/line50.svg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import a from "../assets/a.png";
+import b from "../assets/b.png";
+import c from "../assets/c.png";
+import d from "../assets/d.png";
+import i from "../assets/i.png";
+import { Navigation } from "swiper";
+import "swiper/scss/navigation";
+import leftNav from "../assets/rightNav.svg";
+import rightNav from "../assets/rightNav.svg";
+import { useMediaQuery } from "react-responsive";
 
 const Home = () => {
+  // REF SLIDER
+  const swiperRef = useRef();
+  // RESPONSIVENESS THROUGH USEMEDIAQUERY
+  const bigScreen = useMediaQuery({ query: "(max-width: 1440px)" });
   return (
     <div className="wrapper">
+      {/* HEADER  */}
       <div className="header">
         <div className="left">
           <h1>Канцелярия, товары для полиграфии</h1>
@@ -28,6 +61,137 @@ const Home = () => {
           <img src={whitePen} />
           <img src={linear} />
           <img src={call} />
+        </div>
+      </div>
+
+      {/* CATEGORIES  */}
+      <div className="categories">
+        <div className="pointer">
+          <h1>Категории</h1>
+          <img src={line50} />
+        </div>
+        <div className="box">
+          <div className="category">
+            <img style={{ width: "111px", marginTop: "25px" }} src={cut} />
+            <img style={{ width: "82px" }} src={logoKanzler} />
+            <img style={{ width: "111px" }} src={cut} />
+            <p>Kanzler</p>
+          </div>
+          <div className="category">
+            <img style={{ width: "111px", marginTop: "25px" }} src={cut} />
+            <img style={{ width: "82px" }} src={burger} />
+            <img style={{ width: "111px" }} src={cut} />
+            <p>Bürger</p>
+          </div>
+          <div className="category">
+            <img src={pismoGraph} />
+          </div>
+          <div className="category">
+            <img src={pismoGraph1} />
+          </div>
+          <div className="category">
+            <img src={kansTovar} />
+          </div>
+          <div className="category">
+            <img src={hudozh} />
+          </div>
+          <div className="category">
+            <img src={art} />
+          </div>
+          <div className="category">
+            <img src={poligraph} />
+            <img
+              style={{ position: "absolute", top: "45px" }}
+              src={insidePoligraph}
+            />
+          </div>
+          <div className="category">
+            <img src={office} />
+          </div>
+          <div className="category">
+            <img src={games} />
+            <img
+              style={{ position: "absolute", top: "45px" }}
+              src={insideGame}
+            />
+          </div>
+          <div className="category">
+            <img src={gift} />
+            <img
+              style={{ position: "absolute", top: "45px" }}
+              src={insideGift}
+            />
+          </div>
+          <div className="category">
+            <img src={discounts} />
+            <img
+              style={{ position: "absolute", top: "45px" }}
+              src={insideDiscounts}
+            />
+          </div>
+        </div>
+      </div>
+      <div className="discounts">
+        <div className="pointer">
+          <h1>Акции</h1>
+          <img src={line50} />
+        </div>
+        <div className="ads" style={bigScreen ? { width: "500px" } : null}>
+          <div
+            className="leftNav"
+            onClick={() => swiperRef.current?.slidePrev()}
+          >
+            <img src={leftNav} />
+          </div>
+          <Swiper
+            className="images-ads"
+            modules={[Navigation]}
+            onBeforeInit={(swiper) => {
+              swiperRef.current = swiper;
+            }}
+            spaceBetween={5}
+            slidesPerView={bigScreen ? 1 : 5}
+            speed={800}
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            <SwiperSlide>
+              <img src={a} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={b} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={c} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={d} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={i} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={a} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={b} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={c} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={d} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={i} />
+            </SwiperSlide>
+          </Swiper>
+          <div
+            className="rightNav"
+            onClick={() => swiperRef.current?.slideNext()}
+          >
+            <img src={rightNav} />
+          </div>
         </div>
       </div>
     </div>
