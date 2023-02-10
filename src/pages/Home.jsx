@@ -45,6 +45,8 @@ const Home = () => {
   // REF SLIDER
   const swiperRef = useRef();
   const swiperRe = useRef();
+  const swiperRee = useRef();
+  const swiperR = useRef();
   // RESPONSIVENESS THROUGH USEMEDIAQUERY
   const bigScreen = useMediaQuery({ query: "(max-width: 1440px)" });
   return (
@@ -265,14 +267,14 @@ const Home = () => {
         <div className="popular-goods">
           <div
             className="leftNav"
-            onClick={() => swiperRe.current?.slidePrev()}
+            onClick={() => swiperRee.current?.slidePrev()}
           >
             <img src={leftNav} />
           </div>
           <Swiper
             modules={[Navigation]}
             onBeforeInit={(swiper) => {
-              swiperRe.current = swiper;
+              swiperRee.current = swiper;
             }}
             spaceBetween={5}
             slidesPerView={bigScreen ? 1 : 5}
@@ -303,7 +305,7 @@ const Home = () => {
           </Swiper>
           <div
             className="rightNav"
-            onClick={() => swiperRe.current?.slideNext()}
+            onClick={() => swiperRee.current?.slideNext()}
           >
             <img src={rightNav} />
           </div>
@@ -314,16 +316,13 @@ const Home = () => {
       <div className="company-news">
         <h1>Новости компании</h1>
         <div className="news">
-          <div
-            className="leftNav"
-            onClick={() => swiperRe.current?.slidePrev()}
-          >
+          <div className="leftNav" onClick={() => swiperR.current?.slidePrev()}>
             <img src={leftNav} />
           </div>
           <Swiper
             modules={[Navigation]}
             onBeforeInit={(swiper) => {
-              swiperRe.current = swiper;
+              swiperR.current = swiper;
             }}
             slidesPerView={bigScreen ? 1 : 3}
             speed={800}
@@ -394,7 +393,7 @@ const Home = () => {
           </Swiper>
           <div
             className="rightNav"
-            onClick={() => swiperRe.current?.slideNext()}
+            onClick={() => swiperR.current?.slideNext()}
           >
             <img src={rightNav} />
           </div>
