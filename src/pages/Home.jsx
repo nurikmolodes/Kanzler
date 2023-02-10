@@ -40,6 +40,11 @@ import { data } from "../assets/data";
 import addToCart from "../assets/addToCart.svg";
 import nav from "../assets/nav.svg";
 import newsImage from "../assets/newsImage.svg";
+import regime from "../assets/regime.svg";
+import ogonbaeva from "../assets/ogonbaeva.svg";
+import erkindik from "../assets/erkindik.svg";
+import umetalieva from "../assets/umetalieva.svg";
+import _line from '../assets/_line.svg'
 
 const Home = () => {
   // REF SLIDER
@@ -396,6 +401,42 @@ const Home = () => {
             onClick={() => swiperR.current?.slideNext()}
           >
             <img src={rightNav} />
+          </div>
+        </div>
+      </div>
+
+      {/* ФИЛИАЛЫ  */}
+      <div className="filials">
+        <div className="pointer">
+          <h1>Филиалы</h1>
+          <img src={line50} />
+        </div>
+        <div style={{ display: "flex" }} className="last-two">
+          <div className="contacts">
+            <img src={regime} />
+            <img src={_line} className="_line" />
+            <img src={ogonbaeva} />
+            <img src={_line} className="_line" />
+            <img src={erkindik} />
+            <img src={_line} className="_line" />
+            <img src={umetalieva} />
+            <img src={_line} className="_line" />
+          </div>
+          <div className="map">
+            <div class="mapouter">
+              <div class="gmap_canvas">
+                <iframe
+                  width="1137"
+                  height="484"
+                  id="gmap_canvas"
+                  src="https://maps.google.com/maps?q=Kyrgyzstan улица Атая Огонбаева, 222&t=&z=18&ie=UTF8&iwloc=&output=embed"
+                  frameborder="0"
+                  scrolling="no"
+                  marginheight="0"
+                  marginwidth="0"
+                ></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </div>

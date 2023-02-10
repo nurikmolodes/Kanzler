@@ -506,7 +506,7 @@
         top: 90px;
         left: -79.5px;
         transform: rotateY(180deg);
-        @media(max-width: 435px) {
+        @media (max-width: 435px) {
           left: -20px;
         }
       }
@@ -515,10 +515,93 @@
         z-index: 1;
         top: 90px;
         right: -60px;
-        @media(max-width: 435px) {
+        @media (max-width: 435px) {
           right: 0px;
         }
       }
     }
   }
+  .filials {
+    max-width: 1440px;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 1440px) {
+      align-items: center;
+    }
+    .pointer {
+      display: flex;
+      margin-left: 95px;
+      gap: 14px;
+      img {
+        margin-top: 5px;
+      }
+      @media (max-width: 1440px) {
+        margin-left: 0;
+      }
+    }
+    .last-two {
+      display: flex;
+      gap: 30px;
+      margin-left: 95px;
+      margin-top: 60px;
+      @media (max-width: 1460px) {
+        flex-direction: column;
+      }
+      @media (max-width: 1440px) {
+        margin-left: 0;
+      }
+      .contacts {
+        @media (max-width: 1460px) {
+          display: flex;
+          gap: 100px;
+        }
+        @media (max-width: 1440px) {
+          justify-content: center;
+        }
+        ._line {
+          @media (max-width: 1460px) {
+            display: none;
+          }
+ 
+        }
+        :nth-child(2) {
+          margin-top: 50px;
+        }
+        :nth-child(3) {
+          margin-top: 15px;
+        }
+        :nth-child(4) {
+          margin-top: 15px;
+        }
+        :nth-child(5) {
+          margin-top: 15px;
+        }
+        :nth-child(6) {
+          margin-top: 15px;
+        }
+        :nth-child(7) {
+          margin-top: 15px;
+        }
+        :nth-child(8) {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
+
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 484px;
+  width: 1137px;
+
+}
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 484px;
+  width: 1137px;
+
 }
