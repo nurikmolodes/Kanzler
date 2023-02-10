@@ -8,6 +8,7 @@
   margin: auto;
   min-width: 350px;
   overflow-x: hidden;
+  overflow-y: hidden;
 
   .header {
     max-width: 1440px;
@@ -273,6 +274,8 @@
     align-items: center;
     position: relative;
     background: #f9f1f1;
+    max-width: 1440px;
+    min-width: 350px;
 
     .popular-goods {
       display: flex;
@@ -371,7 +374,7 @@
       margin-top: 160px;
       margin-bottom: 60px;
       margin-right: 920px;
-      @media(max-width: 1440px) {
+      @media (max-width: 1440px) {
         margin-right: 0;
       }
       h1 {
@@ -381,8 +384,9 @@
         font-size: 40px;
         line-height: 100%;
         color: #333333;
-        @media(max-width: 396px) {
-          font-size: 35px;    }
+        @media (max-width: 396px) {
+          font-size: 35px;
+        }
       }
       img {
         margin-top: 5px;
@@ -423,6 +427,97 @@
       @media (max-width: 650px) {
         top: 120px;
         left: 152px;
+      }
+    }
+  }
+  .company-news {
+    max-width: 1440px;
+    min-width: 350px;
+    background: #f9f1f1;
+    margin-top: -28px;
+    @media (max-width: 1440px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      width: 225px;
+      height: 80px;
+      position: relative;
+      top: 155px;
+      left: 70px;
+      font-family: "Pragmatica";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 100%;
+      color: #333333;
+      text-align: center;
+      @media (max-width: 1440px) {
+        top: 0;
+        left: 0;
+        margin-top: 160px;
+      }
+    }
+    .news {
+      position: relative;
+      width: 1000px;
+      margin-left: 375px;
+      margin-top: 80px;
+      @media (max-width: 1440px) {
+        margin-left: 40px;
+        width: 326px;
+      }
+      @media (max-width: 650px) {
+        margin-left: 20px;
+        width: 326px;
+      }
+      .new {
+        width: 307px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ffffff;
+
+        :nth-child(1) {
+          width: 307px;
+        }
+        p {
+          width: 247px;
+        }
+        .link {
+          display: flex;
+          gap: 123px;
+          margin-bottom: 20px;
+          h3 {
+            width: 103px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 100%;
+            color: #333333;
+          }
+        }
+      }
+      .leftNav {
+        position: absolute;
+        z-index: 2;
+        top: 90px;
+        left: -79.5px;
+        transform: rotateY(180deg);
+        @media(max-width: 435px) {
+          left: -20px;
+        }
+      }
+      .rightNav {
+        position: absolute;
+        z-index: 1;
+        top: 90px;
+        right: -60px;
+        @media(max-width: 435px) {
+          right: 0px;
+        }
       }
     }
   }

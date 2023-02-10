@@ -38,6 +38,8 @@ import rightNav from "../assets/rightNav.svg";
 import { useMediaQuery } from "react-responsive";
 import { data } from "../assets/data";
 import addToCart from "../assets/addToCart.svg";
+import nav from "../assets/nav.svg";
+import newsImage from "../assets/newsImage.svg";
 
 const Home = () => {
   // REF SLIDER
@@ -244,6 +246,151 @@ const Home = () => {
                 </div>
               </SwiperSlide>
             ))}
+          </Swiper>
+          <div
+            className="rightNav"
+            onClick={() => swiperRe.current?.slideNext()}
+          >
+            <img src={rightNav} />
+          </div>
+        </div>
+      </div>
+
+      {/* АКЦИОННЫЕ ТОВАРЫ  */}
+      <div className="popular">
+        <div className="pointer">
+          <h1>Акционные товары</h1>
+          <img src={line50} />
+        </div>
+        <div className="popular-goods">
+          <div
+            className="leftNav"
+            onClick={() => swiperRe.current?.slidePrev()}
+          >
+            <img src={leftNav} />
+          </div>
+          <Swiper
+            modules={[Navigation]}
+            onBeforeInit={(swiper) => {
+              swiperRe.current = swiper;
+            }}
+            spaceBetween={5}
+            slidesPerView={bigScreen ? 1 : 5}
+            speed={800}
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            {data.map((i) => (
+              <SwiperSlide>
+                <div className="good" key={i.id}>
+                  <img src={i.img} />
+                  <div>
+                    <h5>В наличии</h5>
+                    <p>{i.name}</p>
+                    <h2>{i.price} с</h2>
+                  </div>
+                  <div className="button">
+                    <div className="oye">
+                      <h4>-</h4>
+                      <h4>{i.amount}</h4>
+                      <h4>+</h4>
+                    </div>
+                    <img src={addToCart} />
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div
+            className="rightNav"
+            onClick={() => swiperRe.current?.slideNext()}
+          >
+            <img src={rightNav} />
+          </div>
+        </div>
+      </div>
+
+      {/* COMPANY NEWS  */}
+      <div className="company-news">
+        <h1>Новости компании</h1>
+        <div className="news">
+          <div
+            className="leftNav"
+            onClick={() => swiperRe.current?.slidePrev()}
+          >
+            <img src={leftNav} />
+          </div>
+          <Swiper
+            modules={[Navigation]}
+            onBeforeInit={(swiper) => {
+              swiperRe.current = swiper;
+            }}
+            slidesPerView={bigScreen ? 1 : 3}
+            speed={800}
+            spaceBetween={10}
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            <SwiperSlide>
+              <div className="new">
+                <img src={newsImage} />
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+                <div className="link">
+                  <h3>Читать больше</h3>
+                  <img src={nav} />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="new">
+                <img src={newsImage} />
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+                <div className="link">
+                  <h3>Читать больше</h3>
+                  <img src={nav} />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="new">
+                <img src={newsImage} />
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+                <div className="link">
+                  <h3>Читать больше</h3>
+                  <img src={nav} />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="new">
+                <img src={newsImage} />
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. In integer ultricies
+                  suscipit dui nulla quam. Ligula tempor placerat velit lectus
+                  tempus est nisi morbi. Pharetra lectus turpis eget curabitur
+                  arcu elementum.
+                </p>
+                <div className="link">
+                  <h3>Читать больше</h3>
+                  <img src={nav} />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="new">
+                <img src={newsImage} />
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. In integer ultricies
+                  suscipit dui nulla quam. Ligula tempor placerat velit lectus
+                  tempus est nisi morbi. Pharetra lectus turpis eget curabitur
+                  arcu elementum.
+                </p>
+                <div className="link">
+                  <h3>Читать больше</h3>
+                  <img src={nav} />
+                </div>
+              </div>
+            </SwiperSlide>
           </Swiper>
           <div
             className="rightNav"
