@@ -367,41 +367,60 @@
 
     .pointer {
       display: flex;
+      gap: 14px;
+      margin-top: 160px;
+      margin-bottom: 60px;
+      margin-right: 920px;
+      @media(max-width: 1440px) {
+        margin-right: 0;
+      }
+      h1 {
+        font-family: "Pragmatica";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 100%;
+        color: #333333;
+        @media(max-width: 396px) {
+          font-size: 35px;    }
+      }
+      img {
+        margin-top: 5px;
+      }
     }
     .rightNav {
       position: absolute;
       z-index: 2;
       right: 7px;
-      top: 180px;
-      @media(max-width: 1440px) {
+      top: 430px;
+      @media (max-width: 1440px) {
         top: 120px;
         right: 0px;
       }
-      @media(max-width: 1000px) {
+      @media (max-width: 1000px) {
         top: 120px;
         right: 20px;
       }
-      @media(max-width: 650px) {
+      @media (max-width: 650px) {
         top: 120px;
         right: 147px;
       }
-
     }
     .leftNav {
       left: -10px;
-      top: 180px;
+      top: 430px;
       position: absolute;
       z-index: 2;
       transform: rotateY(180deg);
-      @media(max-width: 1440px) {
+      @media (max-width: 1440px) {
         top: 120px;
         left: 40px;
       }
-      @media(max-width: 1000px) {
+      @media (max-width: 1000px) {
         top: 120px;
         left: 20px;
       }
-      @media(max-width: 650px) {
+      @media (max-width: 650px) {
         top: 120px;
         left: 152px;
       }
