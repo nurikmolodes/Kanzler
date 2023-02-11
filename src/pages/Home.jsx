@@ -44,7 +44,7 @@ import regime from "../assets/regime.svg";
 import ogonbaeva from "../assets/ogonbaeva.svg";
 import erkindik from "../assets/erkindik.svg";
 import umetalieva from "../assets/umetalieva.svg";
-import _line from '../assets/_line.svg'
+import _line from "../assets/_line.svg";
 
 const Home = () => {
   // REF SLIDER
@@ -426,8 +426,8 @@ const Home = () => {
             <div class="mapouter">
               <div class="gmap_canvas">
                 <iframe
-                  width="1137"
-                  height="484"
+                  width="1137px"
+                  height="484px"
                   id="gmap_canvas"
                   src="https://maps.google.com/maps?q=Kyrgyzstan улица Атая Огонбаева, 222&t=&z=18&ie=UTF8&iwloc=&output=embed"
                   frameborder="0"
