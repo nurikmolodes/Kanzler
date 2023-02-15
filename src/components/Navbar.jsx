@@ -1,16 +1,16 @@
-import Hamburger from 'hamburger-react';
-import React, { useState } from 'react';
-import call from '../assets/call.svg';
-import email from '../assets/email.svg';
-import burger from '../assets/burger.svg';
-import catalog from '../assets/catalog.svg';
-import cartt from '../assets/cart.svg';
-import user from '../assets/user.svg';
-import grey from '../assets/grey.svg';
-import search from '../assets/search.svg';
-import '../App.scss';
-import '../styles/Navbar.scss';
-import { Link } from 'react-router-dom';
+import Hamburger from "hamburger-react";
+import React, { useState } from "react";
+import call from "../assets/call.svg";
+import email from "../assets/email.svg";
+import burger from "../assets/burger.svg";
+import catalog from "../assets/catalog.svg";
+import cartt from "../assets/cart.svg";
+import user from "../assets/user.svg";
+import grey from "../assets/grey.svg";
+import search from "../assets/search.svg";
+import "../App.scss";
+import "../styles/Navbar.scss";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ setSearchh, cart }) => {
   // OPEN BURGER
@@ -50,15 +50,17 @@ const Navbar = ({ setSearchh, cart }) => {
       </nav>
       {/* HEADER  */}
       <header>
-        <Link to={'/'}>
+        <Link to={"/"}>
           <div className="grey">
             <img src={grey} alt="" />
             <img src={burger} alt="" />
           </div>
         </Link>
-        <div className="catalog">
-          <img src={catalog} alt="" />
-        </div>
+        <Link to={'/catalog'}>
+          <div className="catalog">
+            <img src={catalog} alt="" />
+          </div>
+        </Link>
         <div className="search">
           <img src={search} alt="" />
           <input
@@ -67,11 +69,11 @@ const Navbar = ({ setSearchh, cart }) => {
             placeholder="Найти товар"
           />
         </div>
-        <div className="cart" style={{ position: 'relative' }}>
+        <div className="cart" style={{ position: "relative" }}>
           <div className="round">
             <h2>{cart.length}</h2>
           </div>
-          <Link to={'/order'}>
+          <Link to={"/order"}>
             <img src={cartt} alt="" />
           </Link>
           <img src={user} alt="" />
