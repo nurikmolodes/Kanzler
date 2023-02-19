@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import '../styles/Catalog.scss';
-import arrow from '../assets/arrow.svg';
-import banner from '../assets/banner.png';
-import Dropdowns from '../components/Dropdowns';
-import Sort from '../components/Sort';
-import Card from '../components/Card';
+import React, { useState } from "react";
+import "../styles/Catalog.scss";
+import arrow from "../assets/arrow.svg";
+import banner from "../assets/banner.png";
+import Dropdowns from "../components/Dropdowns";
+import Sort from "../components/Sort";
+import Card from "../components/Card";
 
 const Catalog = () => {
   const [open, setOpen] = useState(false);
@@ -14,7 +14,8 @@ const Catalog = () => {
       <div className="first">
         <div className="routeHistory">
           <div>
-            <a href="">Главная </a>/<a href=""> Каталог </a>/<a href=""> Письмо и графика</a>
+            <a href="">Главная </a>/<a href=""> Каталог </a>/
+            <a href=""> Письмо и графика</a>
           </div>
         </div>
         <div className="categories">
@@ -129,7 +130,7 @@ const Catalog = () => {
               <Sort />
             </div>
           </div>
-          <div style={{ maxWidth: '954px' }}>
+          <div style={{ maxWidth: "954px" }}>
             <div className="cards">
               {Array.from([1, 2, 3, 4, 5, 6, 7, 8]).map((item, i) => (
                 <Card />

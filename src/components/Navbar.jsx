@@ -56,7 +56,7 @@ const Navbar = ({ setSearchh, cart }) => {
             <img src={burger} alt="" />
           </div>
         </Link>
-        <Link to={'/catalog'}>
+        <Link to={"/catalog"}>
           <div className="catalog">
             <img src={catalog} alt="" />
           </div>
