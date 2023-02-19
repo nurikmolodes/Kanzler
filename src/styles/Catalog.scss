@@ -449,62 +449,62 @@
     @media (max-width: 463px) {
       grid-template-columns: repeat(1, 1fr);
     }
-    .card {
-      width: 218px;
-      height: 329px;
-      background: #ffffff;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-      padding-left: 17px;
-      padding-top: 15px;
-      h5 {
-        font-weight: 300;
-        font-size: 12px;
-        line-height: 100%;
-        color: #74be84;
-        margin: 0;
-        margin-top: 5px;
-      }
-      p {
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 130%;
-        color: #333333;
-        width: 182px;
-        margin: 0;
-        margin-bottom: 10px;
-        margin-top: 5px;
-      }
-      b {
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 100%;
-        color: #333333;
-      }
-      .counter {
-        display: flex;
-        gap: 10px;
-        .count {
-          font-weight: 300;
-          font-size: 14px;
-          line-height: 100%;
-          text-align: center;
-          color: #333333;
-        }
-      }
-      .addCart {
-        span {
-          display: flex;
-          gap: 10px;
-          margin-bottom: 5px;
-        }
-        .line {
-          width: 82px;
-          border-bottom: 1px solid #333333;
-          margin: 0;
-          opacity: 1;
-        }
-      }
-    }
+    // .card {
+    //   width: 218px;
+    //   height: 329px;
+    //   background: #ffffff;
+    //   border: 1px solid rgba(0, 0, 0, 0.1);
+    //   border-radius: 5px;
+    //   padding-left: 17px;
+    //   padding-top: 15px;
+    //   h5 {
+    //     font-weight: 300;
+    //     font-size: 12px;
+    //     line-height: 100%;
+    //     color: #74be84;
+    //     margin: 0;
+    //     margin-top: 5px;
+    //   }
+    //   p {
+    //     font-weight: 300;
+    //     font-size: 14px;
+    //     line-height: 130%;
+    //     color: #333333;
+    //     width: 182px;
+    //     margin: 0;
+    //     margin-bottom: 10px;
+    //     margin-top: 5px;
+    //   }
+    //   b {
+    //     font-weight: 500;
+    //     font-size: 20px;
+    //     line-height: 100%;
+    //     color: #333333;
+    //   }
+    //   .counter {
+    //     display: flex;
+    //     gap: 10px;
+    //     .count {
+    //       font-weight: 300;
+    //       font-size: 14px;
+    //       line-height: 100%;
+    //       text-align: center;
+    //       color: #333333;
+    //     }
+    //   }
+    //   .addCart {
+    //     span {
+    //       display: flex;
+    //       gap: 10px;
+    //       margin-bottom: 5px;
+    //     }
+    //     .line {
+    //       width: 82px;
+    //       border-bottom: 1px solid #333333;
+    //       margin: 0;
+    //       opacity: 1;
+    //     }
+    //   }
+    // }
   }
 }

@@ -1,21 +1,22 @@
-import { useState } from "react";
-import { Route, Routes } from "react-router-dom";
-import "./App.scss";
-import { data } from "./assets/data";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import Catalog from "./pages/Catalog";
-import ErrorPage from "./pages/ErrorPage";
-import Home from "./pages/Home";
-import Order from "./pages/Order";
+import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import './App.scss';
+import { data } from './assets/data';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import Catalog from './pages/Catalog';
+import ErrorPage from './pages/ErrorPage';
+import Home from './pages/Home';
+import Order from './pages/Order';
+import ProductDetails from './pages/ProductDetails';
 
 function App() {
   // THE DATA
   const [cart, setCart] = useState(data);
   // SEARCH FILTER
-  const [searchh, setSearchh] = useState("");
+  const [searchh, setSearchh] = useState('');
   const filteredCart = cart.filter((item) => {
-    return searchh?.toLowerCase() === ""
+    return searchh?.toLowerCase() === ''
       ? item
       : item?.name?.toLowerCase().includes(searchh?.toLowerCase()) ||
           item?.articul?.toLowerCase().includes(searchh?.toLowerCase());
@@ -38,6 +39,7 @@ function App() {
         />
         <Route path="*" element={<ErrorPage />} />
         <Route path="/catalog" element={<Catalog />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
       </Routes>
       <Footer />
     </div>
