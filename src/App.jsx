@@ -8,6 +8,7 @@ import AboutUs from './pages/AboutUs';
 import Catalog from './pages/Catalog';
 import ErrorPage from './pages/ErrorPage';
 import Home from './pages/Home';
+import News from './pages/News';
 import Order from './pages/Order';
 import ProductDetails from './pages/ProductDetails';
 
@@ -20,7 +21,7 @@ function App() {
     return searchh?.toLowerCase() === ''
       ? item
       : item?.name?.toLowerCase().includes(searchh?.toLowerCase()) ||
-      item?.articul?.toLowerCase().includes(searchh?.toLowerCase());
+          item?.articul?.toLowerCase().includes(searchh?.toLowerCase());
   });
   return (
     <div className="wrapper">
@@ -42,6 +43,7 @@ function App() {
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/news" element={<News />} />
       </Routes>
       <Footer />
     </div>
