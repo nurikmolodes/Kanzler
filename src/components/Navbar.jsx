@@ -26,20 +26,20 @@ const Navbar = ({ setSearchh, cart }) => {
           <li>Популярные товары</li>
           <li>Новинки</li>
           <li>Новости</li>
-          <li>О компании</li>
+          <li><Link style={{ textDecoration: 'none', color: '#333333' }} to={'/aboutus'}>О компании</Link></li>
           <li>Контакты</li>
         </ul>
         <div className="burger" onClick={() => setOpen(!open)}>
-          <Hamburger color="grey" size={30} />
+          <Hamburger toggled={open} color="grey" size={30} />
         </div>
         {open && (
           <div className="modal">
-            <a>Каталог</a>
+            <Link onClick={click => click && setOpen(!open)} style={{ textDecoration: 'none', color: '#333333' }} to={'/catalog'}>Каталог</Link>
             <a>Акции</a>
             <a>Популярные товары</a>
             <a>Новинки</a>
             <a>Новости</a>
-            <a>О компании</a>
+            <Link onClick={click => click && setOpen(!open)} style={{ textDecoration: 'none', color: '#333333' }} to={'/aboutus'}>О компании</Link>
             <a>Контакты</a>
           </div>
         )}
