@@ -25,7 +25,7 @@ const Navbar = ({ setSearchh, cart }) => {
           <li>Акции</li>
           <li>Популярные товары</li>
           <li>Новинки</li>
-          <li>Новости</li>
+          <li><Link style={{ textDecoration: 'none', color: '#333333' }} to={'/news'}>Новости</Link></li>
           <li><Link style={{ textDecoration: 'none', color: '#333333' }} to={'/aboutus'}>О компании</Link></li>
           <li>Контакты</li>
         </ul>
@@ -38,7 +38,7 @@ const Navbar = ({ setSearchh, cart }) => {
             <a>Акции</a>
             <a>Популярные товары</a>
             <a>Новинки</a>
-            <a>Новости</a>
+            <Link onClick={click => click && setOpen(!open)} style={{ textDecoration: 'none', color: '#333333' }} to={'/news'}>Новости</Link>
             <Link onClick={click => click && setOpen(!open)} style={{ textDecoration: 'none', color: '#333333' }} to={'/aboutus'}>О компании</Link>
             <a>Контакты</a>
           </div>
