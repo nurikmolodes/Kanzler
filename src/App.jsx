@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import AboutUs from './pages/AboutUs';
 import Catalog from './pages/Catalog';
+import Contact from './pages/Contact';
 import ErrorPage from './pages/ErrorPage';
 import Home from './pages/Home';
 import News from './pages/News';
@@ -21,7 +22,7 @@ function App() {
     return searchh?.toLowerCase() === ''
       ? item
       : item?.name?.toLowerCase().includes(searchh?.toLowerCase()) ||
-          item?.articul?.toLowerCase().includes(searchh?.toLowerCase());
+      item?.articul?.toLowerCase().includes(searchh?.toLowerCase());
   });
   return (
     <div className="wrapper">
@@ -44,6 +45,7 @@ function App() {
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/news" element={<News />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </div>

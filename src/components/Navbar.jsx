@@ -27,7 +27,7 @@ const Navbar = ({ setSearchh, cart }) => {
           <li>Новинки</li>
           <li><Link style={{ textDecoration: 'none', color: '#333333' }} to={'/news'}>Новости</Link></li>
           <li><Link style={{ textDecoration: 'none', color: '#333333' }} to={'/aboutus'}>О компании</Link></li>
-          <li>Контакты</li>
+          <li><Link style={{ textDecoration: 'none', color: '#333333' }} to={'/contact'}>Контакты</Link></li>
         </ul>
         <div className="burger" onClick={() => setOpen(!open)}>
           <Hamburger toggled={open} color="grey" size={30} />
@@ -40,7 +40,7 @@ const Navbar = ({ setSearchh, cart }) => {
             <a>Новинки</a>
             <Link onClick={click => click && setOpen(!open)} style={{ textDecoration: 'none', color: '#333333' }} to={'/news'}>Новости</Link>
             <Link onClick={click => click && setOpen(!open)} style={{ textDecoration: 'none', color: '#333333' }} to={'/aboutus'}>О компании</Link>
-            <a>Контакты</a>
+            <Link onClick={click => click && setOpen(!open)} style={{ textDecoration: 'none', color: '#333333' }} to={'/contact'}>Контакты</Link>
           </div>
         )}
         <div>
