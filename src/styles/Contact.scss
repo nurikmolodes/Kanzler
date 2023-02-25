@@ -1,0 +1,112 @@
+.contact {
+    max-width: 1440px;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #333333;
+        opacity: 0.5;
+        margin-left: 40px;
+        margin-top: 50px;
+    }
+
+    h1 {
+        font-family: 'Pragmatica';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 100%;
+        color: #333333;
+        margin-left: 40px;
+    }
+
+    .under-contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1288px;
+        height: 126px;
+        background: #f7f4f4;
+        gap: 313px;
+        margin-left: 40px;
+
+        @media(max-width: 1342px) {
+            gap: 20px;
+            justify-content: flex-start;
+            width: 1020px;
+        }
+
+        @media(max-width: 1092px) {
+            gap: 20px;
+            flex-direction: column;
+            width: 530px;
+            height: 200px;
+            align-items: flex-start;
+        }
+
+        @media(max-width: 600px) {
+            width: auto;
+            height: auto;
+            margin-right: 40px;
+            padding-bottom: 20px;
+        }
+
+        p {
+            width: 460px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 150%;
+            color: #333333;
+            opacity: 0.8;
+
+            @media(max-width: 1342px) {
+                margin-left: 40px;
+            }
+
+            @media(max-width: 600px) {
+                width: auto;
+                margin-right: 30px;
+            }
+        }
+
+        .socials {
+            display: flex;
+            gap: 40px;
+            position: relative;
+            margin-bottom: 18px;
+
+            @media(max-width: 1092px) {
+                margin-left: 40px;
+            }
+            @media(max-width: 600px) {
+                gap: 10px;
+                margin-right: 20px;
+                flex-wrap: wrap;
+            }
+
+            h2 {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 100%;
+                color: #333333;
+            }
+
+            :nth-child(5) {
+                position: absolute;
+                right: 0;
+                bottom: -20px;
+
+                @media(max-width: 415px) {
+                    bottom: -30px;
+                }
+            }
+        }
+    }
+}
