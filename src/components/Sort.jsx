@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/Sort.scss';
 import arrow from '../assets/arrow.svg';
 
 const Sort = () => {

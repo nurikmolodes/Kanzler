@@ -8,6 +8,7 @@ import AboutUs from './pages/AboutUs';
 import Catalog from './pages/Catalog';
 import ErrorPage from './pages/ErrorPage';
 import Home from './pages/Home';
+import NewsDetails from './pages/NewsDetails';
 import News from './pages/News';
 import Order from './pages/Order';
 import ProductDetails from './pages/ProductDetails';
@@ -44,6 +45,7 @@ function App() {
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/news" element={<News />} />
+        <Route path="/news/:id" element={<NewsDetails />} />
       </Routes>
       <Footer />
     </div>
