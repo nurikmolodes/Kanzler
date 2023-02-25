@@ -9,6 +9,7 @@ import Catalog from './pages/Catalog';
 import Contact from './pages/Contact';
 import ErrorPage from './pages/ErrorPage';
 import Home from './pages/Home';
+import NewsDetails from './pages/NewsDetails';
 import News from './pages/News';
 import Order from './pages/Order';
 import ProductDetails from './pages/ProductDetails';
@@ -45,6 +46,7 @@ function App() {
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/news" element={<News />} />
+        <Route path="/news/:id" element={<NewsDetails />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />

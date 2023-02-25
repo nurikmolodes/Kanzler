@@ -1,0 +1,34 @@
+.newsCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  .newsImage {
+    img {
+      width: 299px;
+      height: 216px;
+    }
+  }
+  .newsInfo {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 130%;
+    color: #333333;
+    width: 240px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .moreNews {
+    display: flex;
+    gap: 93px;
+    align-items: center;
+    b {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      color: #333333;
+    }
+  }
+}
