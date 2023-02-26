@@ -76,7 +76,8 @@ const Navbar = ({ setSearchh, cart }) => {
           <Link to={"/order"}>
             <img src={cartt} alt="" />
           </Link>
-          <img src={user} alt="" />
+          <Link to={'/profile'}>
+            <img src={user} alt="" /></Link>
         </div>
       </header>
     </div>
