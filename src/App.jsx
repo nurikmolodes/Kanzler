@@ -13,6 +13,7 @@ import NewsDetails from './pages/NewsDetails';
 import News from './pages/News';
 import Order from './pages/Order';
 import ProductDetails from './pages/ProductDetails';
+import Profile from './pages/Profile';
 
 function App() {
   // THE DATA
@@ -23,7 +24,7 @@ function App() {
     return searchh?.toLowerCase() === ''
       ? item
       : item?.name?.toLowerCase().includes(searchh?.toLowerCase()) ||
-      item?.articul?.toLowerCase().includes(searchh?.toLowerCase());
+          item?.articul?.toLowerCase().includes(searchh?.toLowerCase());
   });
   return (
     <div className="wrapper">
@@ -48,6 +49,7 @@ function App() {
         <Route path="/news" element={<News />} />
         <Route path="/news/:id" element={<NewsDetails />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
       <Footer />
     </div>
